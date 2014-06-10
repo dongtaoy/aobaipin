@@ -13,7 +13,7 @@ from django.db import models
 
 class AbpAdfront(models.Model):
     frontid = models.IntegerField(primary_key=True)
-    title = models.CharField(max_length=20)
+    title = models.CharField(max_length=20)1111
     cont = models.TextField(blank=True)
     order = models.IntegerField(blank=True, null=True)
     isdel = models.IntegerField()
