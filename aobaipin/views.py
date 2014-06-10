@@ -1,11 +1,9 @@
 from django.http import HttpResponse
-from django.template.loader import get_template
-from django.template import Context
+from django.shortcuts import render
 
 def hello(request):
-    t = get_template("base.html")
-    html = t.render(Context())
-    return HttpResponse(html)
+    #return HttpResponse(html)
+    return render(request, 'base.html', {1:1})
 
 def world(request):
     return HttpResponse("World")
