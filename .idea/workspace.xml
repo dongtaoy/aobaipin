@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e27007c-eb41-4c78-97d3-c553539cff40" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/lockscreen.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/urls.py" afterPath="$PROJECT_DIR$/aobaipin/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/views.py" afterPath="$PROJECT_DIR$/aobaipin/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aobaipin.iws" />
@@ -69,19 +65,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.2916053" vertical-offset="270" max-vertical-offset="2286">
+            <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="1.2631578" vertical-offset="540" max-vertical-offset="2286">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="dashboard.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="2052">
+            <state line="40" column="50" selection-start="914" selection-end="914" vertical-scroll-proportion="0.7108604" vertical-offset="216" max-vertical-offset="2052">
               <folding>
                 <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -132,8 +128,8 @@
         <option value="$PROJECT_DIR$/aobaipin/urls.py" />
         <option value="$PROJECT_DIR$/aobaipin/views.py" />
         <option value="$PROJECT_DIR$/templates/lockscreen.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
       </list>
     </option>
   </component>
@@ -542,7 +538,11 @@
       <created>1402492092557</created>
       <updated>1402492092557</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="initialize">
+      <created>1402494239273</created>
+      <updated>1402494239274</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -777,6 +777,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lockscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="41" selection-start="2463" selection-end="2463" vertical-scroll-proportion="-17.052631" vertical-offset="0" max-vertical-offset="2250">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="97" column="47" selection-start="2797" selection-end="2797" vertical-scroll-proportion="-16.333334" vertical-offset="1256" max-vertical-offset="1962">
@@ -787,29 +794,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/lockscreen.html">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="41" selection-start="2463" selection-end="2463" vertical-scroll-proportion="-17.052631" vertical-offset="0" max-vertical-offset="2250">
+        <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="1.2631578" vertical-offset="540" max-vertical-offset="2286">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="2052">
+        <state line="40" column="50" selection-start="914" selection-end="914" vertical-scroll-proportion="0.7108604" vertical-offset="216" max-vertical-offset="2052">
           <folding>
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#3;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.2916053" vertical-offset="270" max-vertical-offset="2286">
-          <folding />
         </state>
       </provider>
     </entry>
