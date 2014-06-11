@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from models.models import AbpErpAdmin
-from django.template import RequestContext, loader
+from django.db.models import Count
+from models.models import AbpErpAdmin, AbpErpRetail, AbpItem, AbpUser
+from django.template import RequestContext
 from hashlib import md5
+import time
+import datetime
 
 
 def index(request):
@@ -56,5 +59,32 @@ def custom_context(request):
 
 
 def dashboard(request):
-    return render(request, "dashboard.html", custom_context(request))
-    return HttpResponse("dashboard")
+    ## sales, members, orders, products
+    ## get sales
+    dic = {}
+    today = datetime.date.today()
+    tommorrow = datetime.date.today() + datetime.timedelta(days=1)
+    range = time_range(today, tommorrow)
+    retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1])
+    sum = 0
+    count = 0
+    for retail in retail_data:
+        sum += retail.money - retail.give
+        count += 1
+    dic["sales"] = sum
+    dic["orders"] = count
+
+    ## get product
+    item_data = AbpItem.objects.all().aggregate(Count("itemid"))
+    dic["products"] = item_data["itemid__count"]
+
+    ## get user
+    user_data = AbpUser.objects.filter(regtime__gte=range[0], regtime__lte=range[1]).aggregate(Count("uid"))
+    dic["members"] = user_data["uid__count"]
+
+
+    return render(request, "dashboard.html", dic, context_instance=RequestContext(request, processors=[custom_context]))
+
+
+def time_range(date1, date2):
+    return [time.mktime(date1.timetuple()) - 28800 , time.mktime(date2.timetuple()) - 28800]
