@@ -33,14 +33,14 @@
                 <!-- /.lockscreen-image -->
 
                 <!-- lockscreen credentials (contains the form) -->
-                <div class="lockscreen-credentials">   
+                <div class="lockscreen-credentials">
 
                         <form action="../login/" method="post">
                     <div class="input-group">
                         {% csrf_token %}
 
                             <input type="hidden" name="uname" value="{{uname}}">
-                            <input type="password" name="password" class="form-control" placeholder="password" />
+                            <input type="password" name="password" class="form-control" placeholder="密码" />
                             <div class="input-group-btn">
                                 <button class="btn btn-flat" type="submit"><i class="fa fa-arrow-right text-muted"></i></button>
                             </div>

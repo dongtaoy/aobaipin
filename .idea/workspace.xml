@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e27007c-eb41-4c78-97d3-c553539cff40" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/lockscreen.html" afterPath="$PROJECT_DIR$/templates/lockscreen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login.html" afterPath="$PROJECT_DIR$/templates/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/views.py" afterPath="$PROJECT_DIR$/aobaipin/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="aobaipin.iws" />
@@ -38,7 +41,7 @@
       <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="33" selection-start="1143" selection-end="1215" vertical-scroll-proportion="-4.259259" vertical-offset="335" max-vertical-offset="1260">
+            <state line="50" column="75" selection-start="2263" selection-end="2263" vertical-scroll-proportion="-12.925926" vertical-offset="551" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -47,10 +50,10 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="47" selection-start="2797" selection-end="2797" vertical-scroll-proportion="-16.333334" vertical-offset="1256" max-vertical-offset="1962">
+            <state line="77" column="25" selection-start="2182" selection-end="2182" vertical-scroll-proportion="-45.733334" vertical-offset="14" max-vertical-offset="1944">
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
-                <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
+                <marker date="1402495507142" expanded="true" signature="2182:2608" placeholder="SELECT sum(m..abp_erp_retail..." />
               </folding>
             </state>
           </provider>
@@ -59,7 +62,7 @@
       <file leaf-file-name="lockscreen.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/lockscreen.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="51" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.742268" vertical-offset="0" max-vertical-offset="2250">
+            <state line="42" column="101" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.556701" vertical-offset="378" max-vertical-offset="2250">
               <folding />
             </state>
           </provider>
@@ -68,7 +71,7 @@
       <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="1.2631578" vertical-offset="540" max-vertical-offset="2286">
+            <state line="52" column="96" selection-start="2918" selection-end="2918" vertical-scroll-proportion="-6.9473686" vertical-offset="540" max-vertical-offset="2286">
               <folding />
             </state>
           </provider>
@@ -77,7 +80,7 @@
       <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="50" selection-start="914" selection-end="914" vertical-scroll-proportion="-18.666666" vertical-offset="216" max-vertical-offset="2052">
+            <state line="40" column="50" selection-start="914" selection-end="914" vertical-scroll-proportion="15.333333" vertical-offset="1134" max-vertical-offset="2052">
               <folding>
                 <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -124,11 +127,11 @@
         <option value="$PROJECT_DIR$/models/models.py" />
         <option value="$PROJECT_DIR$/aobaipin/view.py" />
         <option value="$PROJECT_DIR$/aobaipin/settings.py" />
-        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/aobaipin/urls.py" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/aobaipin/views.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/lockscreen.html" />
       </list>
     </option>
@@ -506,7 +509,11 @@
       <created>1402494794571</created>
       <updated>1402494794571</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="initialize">
+      <created>1402494877909</created>
+      <updated>1402494877909</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -592,7 +599,7 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <folding>
             <element signature="e#24#60#0" expanded="true" />
-            <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
+            <marker date="1402495507142" expanded="true" signature="2182:2608" placeholder="SELECT sum(m..abp_erp_retail..." />
           </folding>
         </state>
       </provider>
@@ -663,7 +670,7 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
             <element signature="e#24#60#0" expanded="true" />
-            <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
+            <marker date="1402495507142" expanded="true" signature="2182:2608" placeholder="SELECT sum(m..abp_erp_retail..." />
           </folding>
         </state>
       </provider>
@@ -727,9 +734,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/models/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="778" column="22" selection-start="31490" selection-end="31490" vertical-scroll-proportion="-25.233334" vertical-offset="13211" max-vertical-offset="26262">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="75" selection-start="2263" selection-end="2263" vertical-scroll-proportion="-12.925926" vertical-offset="551" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="25" selection-start="2182" selection-end="2182" vertical-scroll-proportion="-45.733334" vertical-offset="14" max-vertical-offset="1944">
+          <folding>
+            <element signature="e#24#60#0" expanded="true" />
+            <marker date="1402495507142" expanded="true" signature="2182:2608" placeholder="SELECT sum(m..abp_erp_retail..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="96" selection-start="2918" selection-end="2918" vertical-scroll-proportion="-6.9473686" vertical-offset="540" max-vertical-offset="2286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="50" selection-start="914" selection-end="914" vertical-scroll-proportion="-18.666666" vertical-offset="216" max-vertical-offset="2052">
+        <state line="40" column="50" selection-start="914" selection-end="914" vertical-scroll-proportion="15.333333" vertical-offset="1134" max-vertical-offset="2052">
           <folding>
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -739,40 +777,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="778" column="22" selection-start="31490" selection-end="31490" vertical-scroll-proportion="-25.233334" vertical-offset="13211" max-vertical-offset="26262">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="47" selection-start="2797" selection-end="2797" vertical-scroll-proportion="-16.333334" vertical-offset="1256" max-vertical-offset="1962">
-          <folding>
-            <element signature="e#24#60#0" expanded="true" />
-            <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="1.2631578" vertical-offset="540" max-vertical-offset="2286">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="33" selection-start="1143" selection-end="1215" vertical-scroll-proportion="-4.259259" vertical-offset="335" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/lockscreen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="51" selection-start="1364" selection-end="1364" vertical-scroll-proportion="0.742268" vertical-offset="0" max-vertical-offset="2250">
+        <state line="42" column="101" selection-start="1978" selection-end="1978" vertical-scroll-proportion="0.556701" vertical-offset="378" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>

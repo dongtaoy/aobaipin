@@ -76,7 +76,6 @@ def dashboard(request):
         count += 1
     dic["sales"] = sum
     dic["orders"] = count
-
     ## get product
     item_data = AbpItem.objects.all().aggregate(Count("itemid"))
     dic["products"] = item_data["itemid__count"]
