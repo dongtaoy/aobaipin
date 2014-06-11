@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+
+<% block active %>
+Dashboard
+<% endblock %>
+
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-aqua">
+            <div class="inner">
+                <h3>
+                    {{ orders }}
+                </h3>
+
+                <p>
+                    订单量
+                </p>
+
+
+            </div>
+            <div class="icon">
+                <i class="ion ion-bag"></i>
+            </div>
+            <a class="small-box-footer" href="#">
+                更多
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-green">
+            <div class="inner">
+                <h3>
+                    {{ products }}
+                </h3>
+
+                <p>
+                    出售中商品
+                </p>
+
+
+            </div>
+            <div class="icon">
+                <i class="ion ion-pricetags"></i>
+            </div>
+            <a class="small-box-footer" href="#">
+                更多
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-yellow">
+            <div class="inner">
+                <h3>
+                    {{ members }}
+                </h3>
+
+                <p>
+                    新增会员
+                </p>
+
+
+            </div>
+            <div class="icon">
+                <i class="ion ion-person-add"></i>
+            </div>
+            <a class="small-box-footer" href="#">
+                更多
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    <div class="col-lg-3 col-xs-6">
+        <div class="small-box bg-red">
+            <div class="inner">
+                <h3>
+                    {{ sales }}
+                </h3>
+
+                <p>
+                    销量
+                </p>
+
+
+            </div>
+            <div class="icon">
+                <i class="ion ion-ios7-cart-outline"></i>
+            </div>
+            <a class="small-box-footer" href="#">
+                更多
+                <i class="fa fa-arrow-circle-right"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+
+</div>
+{% endblock %}

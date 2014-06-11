@@ -9,5 +9,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', 'aobaipin.views.index'),
     url(r'^login/', 'aobaipin.views.login'),
+    url(r'^logout/', 'aobaipin.views.logout'),
+    url(r'^dashboard/', 'aobaipin.views.dashboard'),
     url(r'^admin/', include(admin.site.urls)),
 )
