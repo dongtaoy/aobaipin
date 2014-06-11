@@ -63,8 +63,8 @@ def dashboard(request):
     ## get sales
     dic = {}
     today = datetime.date.today()
-    tommorrow = datetime.date.today() + datetime.timedelta(days=1)
-    range = time_range(today, tommorrow)
+    tom = datetime.date.today() + datetime.timedelta(days=1)
+    range = time_range(today, tom)
     retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1])
     sum = 0
     count = 0
