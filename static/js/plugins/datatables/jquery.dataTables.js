@@ -6807,7 +6807,7 @@
 	 *  @returns {boolean} true if this version of DataTables is greater or equal to the required
 	 *    version, or false if this version of DataTales is not suitable
 	 *  @static
-	 *  @dtopt API-Static
+	 *  @dtopt API-static
 	 *
 	 *  @example
 	 *    alert( $.fn.dataTable.fnVersionCheck( '1.9.0' ) );
@@ -6842,7 +6842,7 @@
 	 *    node types can be passed in, but will always return false).
 	 *  @returns {boolean} true the table given is a DataTable, or false otherwise
 	 *  @static
-	 *  @dtopt API-Static
+	 *  @dtopt API-static
 	 *
 	 *  @example
 	 *    var ex = document.getElementById('example');
@@ -6873,7 +6873,7 @@
 	 *    visible tables only.
 	 *  @returns {array} Array of TABLE nodes (not DataTable instances) which are DataTables
 	 *  @static
-	 *  @dtopt API-Static
+	 *  @dtopt API-static
 	 *
 	 *  @example
 	 *    var table = $.fn.dataTable.fnTables(true);
