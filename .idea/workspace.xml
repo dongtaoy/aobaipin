@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e27007c-eb41-4c78-97d3-c553539cff40" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/lockscreen.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/urls.py" afterPath="$PROJECT_DIR$/aobaipin/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/views.py" afterPath="$PROJECT_DIR$/aobaipin/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -29,28 +33,46 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="737" column="13" selection-start="29591" selection-end="29598" vertical-scroll-proportion="-7.8333335" vertical-offset="12995" max-vertical-offset="26262">
+            <state line="778" column="22" selection-start="31490" selection-end="31490" vertical-scroll-proportion="-25.233334" vertical-offset="13211" max-vertical-offset="26262">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="33" selection-start="1143" selection-end="1215" vertical-scroll-proportion="-11.444445" vertical-offset="141" max-vertical-offset="1260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="33" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.388102" vertical-offset="914" max-vertical-offset="1710">
+            <state line="97" column="47" selection-start="2797" selection-end="2797" vertical-scroll-proportion="-16.333334" vertical-offset="1256" max-vertical-offset="1962">
               <folding>
                 <element signature="e#24#60#0" expanded="true" />
-                <marker date="1402492083454" expanded="true" signature="2046:2474" placeholder="SELECT sum(m..abp_erp_retail..." />
+                <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="lockscreen.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/lockscreen.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="41" selection-start="2463" selection-end="2463" vertical-scroll-proportion="-17.052631" vertical-offset="0" max-vertical-offset="2250">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="89" selection-start="2709" selection-end="2709" vertical-scroll-proportion="-7.1754384" vertical-offset="473" max-vertical-offset="3690">
+            <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.2916053" vertical-offset="270" max-vertical-offset="2286">
               <folding />
             </state>
           </provider>
@@ -59,7 +81,7 @@
       <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="18" selection-start="1249" selection-end="1249" vertical-scroll-proportion="-37.333332" vertical-offset="0" max-vertical-offset="2106">
+            <state line="7" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="2052">
               <folding>
                 <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -73,7 +95,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aobaipin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="1" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+            <state line="13" column="42" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
               <folding>
                 <element signature="e#0#51#0" expanded="true" />
               </folding>
@@ -108,9 +130,10 @@
         <option value="$PROJECT_DIR$/aobaipin/settings.py" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/aobaipin/urls.py" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/aobaipin/views.py" />
+        <option value="$PROJECT_DIR$/templates/lockscreen.html" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
       </list>
     </option>
   </component>
@@ -189,6 +212,60 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aobaipin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aobaipin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="examples" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aobaipin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aobaipin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aobaipin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aobaipin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -229,6 +306,11 @@
         <option name="myModuleName" value="aobaipin" />
       </console-settings>
     </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -456,7 +538,11 @@
       <created>1402492064606</created>
       <updated>1402492064606</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="initialize">
+      <created>1402492092557</created>
+      <updated>1402492092557</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -490,7 +576,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32916668" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19624102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19624102" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -542,7 +628,7 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="810">
           <folding>
             <element signature="e#24#60#0" expanded="true" />
-            <marker date="1402492083454" expanded="true" signature="2046:2474" placeholder="SELECT sum(m..abp_erp_retail..." />
+            <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
           </folding>
         </state>
       </provider>
@@ -613,7 +699,7 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding>
             <element signature="e#24#60#0" expanded="true" />
-            <marker date="1402492083454" expanded="true" signature="2046:2474" placeholder="SELECT sum(m..abp_erp_retail..." />
+            <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
           </folding>
         </state>
       </provider>
@@ -661,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1521" selection-end="1521" vertical-scroll-proportion="-18.11111" vertical-offset="141" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="319" selection-end="382" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1854">
@@ -677,23 +756,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="1" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+        <state line="13" column="42" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
           <folding>
             <element signature="e#0#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/models/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="89" selection-start="2709" selection-end="2709" vertical-scroll-proportion="-7.1754384" vertical-offset="473" max-vertical-offset="3690">
+        <state line="778" column="22" selection-start="31490" selection-end="31490" vertical-scroll-proportion="-25.233334" vertical-offset="13211" max-vertical-offset="26262">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="33" selection-start="1143" selection-end="1215" vertical-scroll-proportion="-11.444445" vertical-offset="141" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="47" selection-start="2797" selection-end="2797" vertical-scroll-proportion="-16.333334" vertical-offset="1256" max-vertical-offset="1962">
+          <folding>
+            <element signature="e#24#60#0" expanded="true" />
+            <marker date="1402493807150" expanded="true" signature="2182:2609" placeholder="SELECT sum(m..abp_erp_retail..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/lockscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="41" selection-start="2463" selection-end="2463" vertical-scroll-proportion="-17.052631" vertical-offset="0" max-vertical-offset="2250">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="18" selection-start="1249" selection-end="1249" vertical-scroll-proportion="-37.333332" vertical-offset="0" max-vertical-offset="2106">
+        <state line="7" column="0" selection-start="67" selection-end="67" vertical-scroll-proportion="-4.6666665" vertical-offset="0" max-vertical-offset="2052">
           <folding>
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#sup#0;n#h3#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
@@ -703,20 +806,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/models.py">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="737" column="13" selection-start="29591" selection-end="29598" vertical-scroll-proportion="-7.8333335" vertical-offset="12995" max-vertical-offset="26262">
+        <state line="26" column="26" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.2916053" vertical-offset="270" max-vertical-offset="2286">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="33" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.388102" vertical-offset="914" max-vertical-offset="1710">
-          <folding>
-            <element signature="e#24#60#0" expanded="true" />
-            <marker date="1402492083454" expanded="true" signature="2046:2474" placeholder="SELECT sum(m..abp_erp_retail..." />
-          </folding>
         </state>
       </provider>
     </entry>

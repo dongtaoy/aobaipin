@@ -27,17 +27,18 @@ def login(request):
             request.session["name"] = user.real_name
             request.session["u_id"] = user.adminid
             return redirect("/dashboard")
-
         raise Exception("mismatched password")
     except Exception as ex:
-        return HttpResponse(ex)
         return render(request, "login.html", {"login_fail": 1})
 
 
 def logout(request):
-    del request.session["uname"]
-    del request.session["name"]
-    del request.session["u_id"]
+    try:
+        del request.session["uname"]
+        del request.session["name"]
+        del request.session["u_id"]
+    except:
+        pass
     return redirect("/login")
 
 
@@ -54,13 +55,15 @@ def login_status(request):
 
 def custom_context(request):
     return {
+        "uname" : request.session["uname"],
         "username": request.session["name"]
     }
 
-
 def dashboard(request):
+    if not(login_status(request)):
+        return redirect("/login")
     ## sales, members, orders, products
-    ## get sales
+    ## get sales and orders
     dic = {}
     today = datetime.date.today()
     tom = datetime.date.today() + datetime.timedelta(days=1)
@@ -82,9 +85,19 @@ def dashboard(request):
     user_data = AbpUser.objects.filter(regtime__gte=range[0], regtime__lte=range[1]).aggregate(Count("uid"))
     dic["members"] = user_data["uid__count"]
 
-
     return render(request, "dashboard.html", dic, context_instance=RequestContext(request, processors=[custom_context]))
 
 
+def lock(request):
+    if request.method == "GET":
+        try:
+            del request.session["u_id"]
+        except:
+            pass
+
+    return render(request, "lockscreen.html", {}, context_instance=RequestContext(request, processors=[custom_context]))
+
+
 def time_range(date1, date2):
-    return [time.mktime(date1.timetuple()) - 28800 , time.mktime(date2.timetuple()) - 28800]
+    return [time.mktime(date1.timetuple()) - 28800, time.mktime(date2.timetuple()) - 28800]
+
