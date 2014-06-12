@@ -7,7 +7,7 @@ from django.template import RequestContext
 from hashlib import md5
 import time
 import datetime
-
+from django_ajax.decorators import ajax
 
 def index(request):
     if not(login_status(request)):
@@ -59,23 +59,31 @@ def custom_context(request):
         "username": request.session["name"]
     }
 
+
+@ajax
+def graph_spline(request):
+    date = []
+    data = []
+    start = datetime.date.today() - datetime.timedelta(days=int(request.GET["days"]))
+    for i in range(0, int(request.GET["days"]) + 1):
+        date.append((start + datetime.timedelta(days=i)).strftime("%m/%d"))
+        data.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
+                                                 (start + datetime.timedelta(days=i+1))))[0]))
+    return [date, data]
+
+
+
+
 def dashboard(request):
     if not(login_status(request)):
         return redirect("/login")
     ## sales, members, orders, products
-    ## get sales and orders
-    dic = {}
     today = datetime.date.today()
     tom = datetime.date.today() + datetime.timedelta(days=1)
+    ## get sales and orders
+    dic = {}
     range = time_range(today, tom)
-    retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1])
-    sum = 0
-    count = 0
-    for retail in retail_data:
-        sum += retail.money - retail.give
-        count += 1
-    dic["sales"] = sum
-    dic["orders"] = count
+    dic["sales"], dic["orders"] = get_sale_data(range)
     ## get product
     item_data = AbpItem.objects.all().aggregate(Count("itemid"))
     dic["products"] = item_data["itemid__count"]
@@ -98,5 +106,16 @@ def lock(request):
 
 
 def time_range(date1, date2):
-    return [time.mktime(date1.timetuple()) - 28800, time.mktime(date2.timetuple()) - 28800]
+    return [time.mktime(date1.timetuple()), time.mktime(date2.timetuple())]
+
+
+def get_sale_data(range):
+    sum = 0
+    count = 0
+    retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1])
+    for retail in retail_data:
+        sum += retail.money - retail.give
+        count += 1
+
+    return sum, count
 

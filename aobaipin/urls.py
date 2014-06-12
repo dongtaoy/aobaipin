@@ -12,5 +12,6 @@ urlpatterns = patterns('',
     url(r'^logout/', 'aobaipin.views.logout'),
     url(r'^dashboard/', 'aobaipin.views.dashboard'),
     url(r'^lock/', 'aobaipin.views.lock'),
+    url(r'^graph_spline/', 'aobaipin.views.graph_spline'),
     url(r'^admin/', include(admin.site.urls)),
 )

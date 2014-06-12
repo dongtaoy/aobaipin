@@ -55,7 +55,7 @@ body > .header {
   min-height: 100%;
   display: block;
 }
-/*right side - contins main content*/
+/*right side - contins main content.html*/
 .right-side {
   background-color: #f9f9f9;
   margin-left: 220px;
@@ -82,7 +82,7 @@ body > .header {
     left: -220px;
   }
 }
-/*Give content full width on xs screens*/
+/*Give content.html full width on xs screens*/
 @media screen and (max-width: 992px) {
   .right-side {
     margin-left: 0;
@@ -327,7 +327,7 @@ table.text-center th {
   height: auto!important;
 }
 /*
-    Components: navbar, logo and content header
+    Components: navbar, logo and content.html header
 -------------------------------------------------
 */
 body > .header {
@@ -2449,7 +2449,7 @@ Component: timeline
 .skin-blue .logo:hover {
   background: #357ca5;
 }
-/* skin-blue content header */
+/* skin-blue content.html header */
 .skin-blue .right-side > .content-header {
   background: #fbfbfb;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
@@ -2600,7 +2600,7 @@ Component: timeline
 .skin-black .logo:hover {
   background: #303030;
 }
-/* skin-black content header */
+/* skin-black content.html header */
 .skin-black .right-side > .content-header {
   background: transparent;
   box-shadow: none;

@@ -270,7 +270,7 @@ function Calendar(element, options, eventSources) {
 			element.addClass('ui-widget');
 		}
 
-		content = $("<div class='fc-content' style='position:relative'/>")
+		content = $("<div class='fc-content.html' style='position:relative'/>")
 			.prependTo(element);
 
 		header = new Header(t, options);
@@ -2247,7 +2247,7 @@ function BasicView(element, calendar, viewName) {
 		bodyFirstCells = bodyRows.find('td:first-child');
 
 		firstRowCellInners = bodyRows.eq(0).find('.fc-day > div');
-		firstRowCellContentInners = bodyRows.eq(0).find('.fc-day-content > div');
+		firstRowCellContentInners = bodyRows.eq(0).find('.fc-day-content.html > div');
 		
 		markFirstLast(head.add(head.find('tr'))); // marks first+last tr/th's
 		markFirstLast(bodyRows); // marks first+last td's
@@ -2312,7 +2312,7 @@ function BasicView(element, calendar, viewName) {
 
 
 	function buildBodyHTML() {
-		var contentClass = tm + "-widget-content";
+		var contentClass = tm + "-widget-content.html";
 		var html = '';
 		var row;
 		var col;
@@ -2349,7 +2349,7 @@ function BasicView(element, calendar, viewName) {
 
 
 	function buildCellHTML(date) {
-		var contentClass = tm + "-widget-content";
+		var contentClass = tm + "-widget-content.html";
 		var month = t.start.getMonth();
 		var today = clearTime(new Date());
 		var html = '';
@@ -2387,7 +2387,7 @@ function BasicView(element, calendar, viewName) {
 		}
 
 		html +=
-			"<div class='fc-day-content'>" +
+			"<div class='fc-day-content.html'>" +
 			"<div style='position:relative'>&nbsp;</div>" +
 			"</div>" +
 			"</div>" +
@@ -2930,7 +2930,7 @@ function AgendaView(element, calendar, viewName) {
 
 	function buildSkeleton() {
 		var headerClass = tm + "-widget-header";
-		var contentClass = tm + "-widget-content";
+		var contentClass = tm + "-widget-content.html";
 		var s;
 		var d;
 		var i;
@@ -2955,7 +2955,7 @@ function AgendaView(element, calendar, viewName) {
 				"<tr>" +
 				"<th class='" + headerClass + " fc-agenda-axis'>" + opt('allDayText') + "</th>" +
 				"<td>" +
-				"<div class='fc-day-content'><div style='position:relative'/></div>" +
+				"<div class='fc-day-content.html'><div style='position:relative'/></div>" +
 				"</td>" +
 				"<th class='" + headerClass + " fc-agenda-gutter'>&nbsp;</th>" +
 				"</tr>" +
@@ -3037,7 +3037,7 @@ function AgendaView(element, calendar, viewName) {
 		dayBody = dayTable.find('tbody');
 		dayBodyCells = dayBody.find('td').slice(0, -1); // exclude gutter
 		dayBodyCellInners = dayBodyCells.find('> div');
-		dayBodyCellContentInners = dayBodyCells.find('.fc-day-content > div');
+		dayBodyCellContentInners = dayBodyCells.find('.fc-day-content.html > div');
 
 		dayBodyFirstCell = dayBodyCells.eq(0);
 		dayBodyFirstCellStretcher = dayBodyCellInners.eq(0);
@@ -3108,7 +3108,7 @@ function AgendaView(element, calendar, viewName) {
 
 	function buildDayTableBodyHTML() {
 		var headerClass = tm + "-widget-header"; // TODO: make these when updateOptions() called
-		var contentClass = tm + "-widget-content";
+		var contentClass = tm + "-widget-content.html";
 		var date;
 		var today = clearTime(new Date());
 		var col;
@@ -3149,7 +3149,7 @@ function AgendaView(element, calendar, viewName) {
 			cellHTML =
 				"<td class='" + classNames.join(' ') + "'>" +
 				"<div>" +
-				"<div class='fc-day-content'>" +
+				"<div class='fc-day-content.html'>" +
 				"<div style='position:relative'>&nbsp;</div>" +
 				"</div>" +
 				"</div>" +
@@ -5459,13 +5459,13 @@ function DayEventRenderer() {
 
 
 	// Calculate the "top" coordinate for each segment, relative to the "top" of the row.
-	// Also, return an array that contains the "content" height for each row
+	// Also, return an array that contains the "content.html" height for each row
 	// (the height displaced by the vertically stacked events in the row).
 	// Requires segments to have their `outerHeight` property already set.
 	function calculateVerticals(segments) {
 		var rowCnt = getRowCnt();
 		var colCnt = getColCnt();
-		var rowContentHeights = []; // content height for each row
+		var rowContentHeights = []; // content.html height for each row
 		var segmentRows = buildSegmentRows(segments); // an array of segment arrays, one for each row
 
 		for (var rowI=0; rowI<rowCnt; rowI++) {
@@ -5497,7 +5497,7 @@ function DayEventRenderer() {
 				}
 			}
 
-			// the tallest column in the row should be the "content height"
+			// the tallest column in the row should be the "content.html height"
 			rowContentHeights.push(arrayMax(colHeights));
 		}
 
@@ -5589,8 +5589,8 @@ function DayEventRenderer() {
 	}
 
 
-	// Return an array of jQuery objects for the placeholder content containers of each row.
-	// The content containers don't actually contain anything, but their dimensions should match
+	// Return an array of jQuery objects for the placeholder content.html containers of each row.
+	// The content.html containers don't actually contain anything, but their dimensions should match
 	// the events that are overlaid on top.
 	function getRowContentElements() {
 		var i;
@@ -5598,7 +5598,7 @@ function DayEventRenderer() {
 		var rowDivs = [];
 		for (i=0; i<rowCnt; i++) {
 			rowDivs[i] = allDayRow(i)
-				.find('div.fc-day-content > div');
+				.find('div.fc-day-content.html > div');
 		}
 		return rowDivs;
 	}

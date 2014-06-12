@@ -6,8 +6,6 @@
 {% endblock %}
 
 
-
-
 {% block content %}
 <div class="row">
     <div class="col-lg-3 col-xs-6">
@@ -102,7 +100,114 @@
             </a>
         </div>
     </div>
-    </div>
-
 </div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box box-primary">
+            <div class="box-header">
+                <div class="pull-right box-tools">
+                    <button class="btn btn-primary btn-sm refresh-btn" data-toggle="tooltip"
+                            data-original-title="Reload" onclick="graph();">
+                        <i class="fa fa-refresh">
+                        </i>
+                    </button>
+                    <button class="btn btn-primary btn-sm" data-widget="collapse" data-toggle="tooltip">
+                        <i class="fa fa-minus">
+                        </i>
+                    </button>
+                </div>
+                <i class="fa fa-inbox"></i>
+
+                <h3 class="box-title">
+                    三十天销售额
+                </h3>
+            </div>
+            <div class="box-body chart-responsive">
+                <div class="chart">
+                    <div id="salechart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 {% endblock %}
+
+{% block js %}
+<script src="../static/js/plugins/highchart/highcharts.js" type="text/javascript"></script>
+<!--<script src="../static/js/plugins/highchart/highchart.grid.js" type="text/javascript"></script>-->
+<script>
+    graph();
+
+    function graph() {
+        $.ajax({
+            url: "/graph_spline/",
+            type: "GET",
+            data: {days: 30},
+            success: function (response) {
+                var cat = response["content"][0];
+                var dat = int_array(response["content"][1])
+                $('#salechart').highcharts({
+                    chart: {
+                        type: 'area'
+                    },
+                    title: {
+                        text: null
+                    },
+                    xAxis: {
+                        categories: cat
+                    },
+                    yAxis: {
+                        title: {
+                            text: '金额 （元）'
+                        },
+                        plotLines: [
+                            {
+                                value: 0,
+                                width: 1,
+                                color: '#808080'
+                            }
+                        ]
+                    },
+                    plotOptions: {
+                        line: {
+                            dataLabels: {
+                                enabled: true,
+                                style: {
+                                    fontWeight: 'bold',
+                                    font: '15px arial,sans-serif'
+                                },
+                                y: -10
+                            },
+                            enableMouseTracking: true
+                        }
+                    },
+                    tooltip: {
+                        valueSuffix: '元'
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    series: [
+                        {
+                            name: '销量',
+                            data: dat
+                        }
+                    ]
+                });
+            }
+        });
+    }
+    function int_array(dat) {
+        for (var i = 0; i < dat.length; i++) {
+            dat[i] = parseInt(dat[i]);
+        }
+        return dat;
+    }
+
+
+</script>
+
+
+{% endblock%}

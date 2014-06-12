@@ -7700,7 +7700,7 @@
 		
 		/**
 		 * Property to read the value for the cells in the column from the data 
-		 * source array / object. If null, then the default content is used, if a
+		 * source array / object. If null, then the default content.html is used, if a
 		 * function is given then the return from the function is used.
 		 *  @type function|int|string|null
 		 *  @default null
@@ -10071,7 +10071,7 @@
 		 *       use Javascript dotted notation to read deep properties / arrays from the
 		 *       data source.</li>
 		 *     <li>null - the sDefaultContent option will be used for the cell (null
-		 *       by default, so you will need to specify the default content you want -
+		 *       by default, so you will need to specify the default content.html you want -
 		 *       typically an empty string). This can be useful on generated columns such 
 		 *       as edit / delete action columns.</li>
 		 *     <li>function - the function given will be executed whenever DataTables 

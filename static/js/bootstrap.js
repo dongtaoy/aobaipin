@@ -1500,7 +1500,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     placement: 'right'
   , trigger: 'click'
   , content: ''
-  , template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'
+  , template: '<div class="popover"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content.html"></div></div>'
   })
 
 
@@ -1521,7 +1521,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     var content = this.getContent()
 
     $tip.find('.popover-title')[this.options.html ? 'html' : 'text'](title)
-    $tip.find('.popover-content')[this.options.html ? 'html' : 'text'](content)
+    $tip.find('.popover-content.html')[this.options.html ? 'html' : 'text'](content)
 
     $tip.removeClass('fade top bottom left right in')
 
@@ -1538,7 +1538,7 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
     var $e = this.$element
     var o  = this.options
 
-    return $e.attr('data-content')
+    return $e.attr('data-content.html')
       || (typeof o.content == 'function' ?
             o.content.call($e[0]) :
             o.content)

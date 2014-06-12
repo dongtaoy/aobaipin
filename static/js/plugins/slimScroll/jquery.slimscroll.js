@@ -136,7 +136,7 @@
                 return;
               }
 
-              // scroll content by the given offset
+              // scroll content.html by the given offset
               scrollContent(offset, false, true);
             }
 
@@ -146,7 +146,7 @@
         // optionally set height to the parent's height
         o.height = (o.height == 'auto') ? me.parent().height() : o.height;
 
-        // wrap content
+        // wrap content.html
         var wrapper = $(divS)
           .addClass(o.wrapperClass)
           .css({
@@ -218,7 +218,7 @@
             $doc.bind("mousemove.slimscroll", function(e){
               currTop = t + e.pageY - pageY;
               bar.css('top', currTop);
-              scrollContent(0, bar.position().top, false);// scroll content
+              scrollContent(0, bar.position().top, false);// scroll content.html
             });
 
             $doc.bind("mouseup.slimscroll", function(e) {
@@ -276,7 +276,7 @@
           {
             // see how far user swiped
             var diff = (touchDif - e.originalEvent.touches[0].pageY) / o.touchScrollStep;
-            // scroll content
+            // scroll content.html
             scrollContent(diff, true);
             touchDif = e.originalEvent.touches[0].pageY;
           }
@@ -288,7 +288,7 @@
         // check start position
         if (o.start === 'bottom')
         {
-          // scroll content to bottom
+          // scroll content.html to bottom
           bar.css({ top: me.outerHeight() - bar.outerHeight() });
           scrollContent(0, true);
         }
@@ -317,7 +317,7 @@
 
           var target = e.target || e.srcTarget || e.srcElement;
           if ($(target).closest('.' + o.wrapperClass).is(me.parent())) {
-            // scroll content
+            // scroll content.html
             scrollContent(delta, true);
           }
 
@@ -362,7 +362,7 @@
             bar.css({ top: offsetTop + 'px' });
           }
 
-          // scroll content
+          // scroll content.html
           me.scrollTop(delta);
 
           // fire scrolling event
@@ -395,7 +395,7 @@
           barHeight = Math.max((me.outerHeight() / me[0].scrollHeight) * me.outerHeight(), minBarHeight);
           bar.css({ height: barHeight + 'px' });
 
-          // hide scrollbar if content is not long enough
+          // hide scrollbar if content.html is not long enough
           var display = barHeight == me.outerHeight() ? 'none' : 'block';
           bar.css({ display: display });
         }

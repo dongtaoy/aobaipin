@@ -290,7 +290,7 @@ $.extend( $.ui, {
 	// only used by resizable
 	hasScroll: function( el, a ) {
 
-		//If overflow is hidden, the element might have extra content, but the user wants to hide it
+		//If overflow is hidden, the element might have extra content.html, but the user wants to hide it
 		if ( $( el ).css( "overflow" ) === "hidden") {
 			return false;
 		}
@@ -5875,7 +5875,7 @@ $.widget( "ui.menu", {
 		this.mouseHandled = false;
 		this.element
 			.uniqueId()
-			.addClass( "ui-menu ui-widget ui-widget-content ui-corner-all" )
+			.addClass( "ui-menu ui-widget ui-widget-content.html ui-corner-all" )
 			.toggleClass( "ui-menu-icons", !!this.element.find( ".ui-icon" ).length )
 			.attr({
 				role: this.options.role,
@@ -5973,7 +5973,7 @@ $.widget( "ui.menu", {
 		this.element
 			.removeAttr( "aria-activedescendant" )
 			.find( ".ui-menu" ).addBack()
-				.removeClass( "ui-menu ui-widget ui-widget-content ui-corner-all ui-menu-icons" )
+				.removeClass( "ui-menu ui-widget ui-widget-content.html ui-corner-all ui-menu-icons" )
 				.removeAttr( "role" )
 				.removeAttr( "tabIndex" )
 				.removeAttr( "aria-labelledby" )
@@ -6002,7 +6002,7 @@ $.widget( "ui.menu", {
 				});
 
 		// Destroy menu dividers
-		this.element.find( ".ui-menu-divider" ).removeClass( "ui-menu-divider ui-widget-content" );
+		this.element.find( ".ui-menu-divider" ).removeClass( "ui-menu-divider ui-widget-content.html" );
 	},
 
 	_keydown: function( event ) {
@@ -6117,7 +6117,7 @@ $.widget( "ui.menu", {
 
 		// Initialize nested menus
 		submenus.filter( ":not(.ui-menu)" )
-			.addClass( "ui-menu ui-widget ui-widget-content ui-corner-all" )
+			.addClass( "ui-menu ui-widget ui-widget-content.html ui-corner-all" )
 			.hide()
 			.attr({
 				role: this.options.role,
@@ -6156,7 +6156,7 @@ $.widget( "ui.menu", {
 			var item = $( this );
 			// hyphen, em dash, en dash
 			if ( !/[^\-\u2014\u2013\s]/.test( item.text() ) ) {
-				item.addClass( "ui-widget-content ui-menu-divider" );
+				item.addClass( "ui-widget-content.html ui-menu-divider" );
 			}
 		});
 
@@ -7426,7 +7426,7 @@ $.extend( $.effects, {
 			active = document.activeElement;
 
 		// support: Firefox
-		// Firefox incorrectly exposes anonymous content
+		// Firefox incorrectly exposes anonymous content.html
 		// https://bugzilla.mozilla.org/show_bug.cgi?id=561664
 		try {
 			active.id;
@@ -8431,7 +8431,7 @@ $.effects.effect.size = function( o, done ) {
 		}
 	}
 
-	// Scale the content
+	// Scale the content.html
 	if ( scale === "content" || scale === "both" ) {
 
 		// Vertical props scaling

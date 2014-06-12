@@ -25,7 +25,7 @@ $(function() {
             $(".right-side").removeClass("strech");
             $('.row-offcanvas').toggleClass("relative");
         } else {
-            //Else, enable content streching
+            //Else, enable content.html streching
             $('.left-side').toggleClass("collapse-left");
             $(".right-side").toggleClass("strech");
         }
