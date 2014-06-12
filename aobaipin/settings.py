@@ -59,9 +59,11 @@ WSGI_APPLICATION = 'aobaipin.wsgi.application'
 
 DATABASES = {
     'default': {
+
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'aobaipin',
-        'USER': 'root',
+        'HOST': '10.10.10.5',
+        'USER': 'dongtaoy',
         'PASSWORD': 'yudanny1',
 
 

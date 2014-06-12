@@ -66,10 +66,10 @@ def graph_spline(request):
     data = []
     start = datetime.date.today() - datetime.timedelta(days=int(request.GET["days"]))
     for i in range(0, int(request.GET["days"]) + 1):
-        date.append((start + datetime.timedelta(days=i)).strftime("%m/%d"))
+        date.append((start + datetime.timedelta(days=i)).strftime("%y,%m,%d"))
         data.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
                                                  (start + datetime.timedelta(days=i+1))))[0]))
-    return [date, data]
+    return [date[0], data]
 
 
 

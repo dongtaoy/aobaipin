@@ -7,7 +7,14 @@ For more information on this file, see
 https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 """
 
+
 import os
+import sys
+
+path = "/home/dongtaoy/Dropbox/Projects/aobaipin/"
+if path not in sys.path:
+    sys.path.append(path)
+
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "aobaipin.settings")
 
 from django.core.wsgi import get_wsgi_application
