@@ -2,39 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e27007c-eb41-4c78-97d3-c553539cff40" name="Default" comment="initialize">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/404.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/500.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/forms/advanced.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/blank.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/buttons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/calendar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/tables/data.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/forms/editors.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/empty.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/empty.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/charts/empty.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/forms/empty.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/tables/empty.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/charts/flot.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/general.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/forms/general.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/icons.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/charts/inline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/invoice.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/jquery-ui.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/lockscreen.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/mailbox.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/charts/morris.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/examples/register.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/sample.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/tables/simple.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/sliders.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/UI/timeline.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/pages/widgets.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace (melb's conflicted copy 2014-06-11).xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/aobaipin.iml" afterPath="$PROJECT_DIR$/.idea/aobaipin.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="0376b9f9-d828-42c1-a167-37fc6e30e00b" name="Failed commit: Default" comment="initialize" />
@@ -521,7 +488,11 @@
       <created>1402636856752</created>
       <updated>1402636856752</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="initialize">
+      <created>1402637187133</created>
+      <updated>1402637187133</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
