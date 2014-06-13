@@ -147,7 +147,7 @@
             data: {days: 30},
             success: function (response) {
                 var cat = response["content"][0].split(',');
-                var dat = int_array(response["content"][1])
+                var dat = int_array(response["content"][1]);
 
                 $('#salechart').highcharts({
                     chart: {

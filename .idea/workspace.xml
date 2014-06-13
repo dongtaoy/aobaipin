@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e27007c-eb41-4c78-97d3-c553539cff40" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/aobaipin.iml" afterPath="$PROJECT_DIR$/.idea/aobaipin.iml" />
+    <list default="true" id="3e27007c-eb41-4c78-97d3-c553539cff40" name="Default" comment="initialize">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/plugins/highchart/highchart.grid.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/js/plugins/highchart/highcharts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/dashboard.html" afterPath="$PROJECT_DIR$/templates/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/settings.py" afterPath="$PROJECT_DIR$/aobaipin/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/views.py" afterPath="$PROJECT_DIR$/aobaipin/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aobaipin/wsgi.py" afterPath="$PROJECT_DIR$/aobaipin/wsgi.py" />
     </list>
+    <list id="0376b9f9-d828-42c1-a167-37fc6e30e00b" name="Failed commit: Default" comment="initialize" />
     <ignored path="aobaipin.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,37 +32,17 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="404" column="18" selection-start="15780" selection-end="15792" vertical-scroll-proportion="0.0" vertical-offset="6060" max-vertical-offset="21885">
+            <state line="404" column="18" selection-start="15780" selection-end="15792" vertical-scroll-proportion="0.0" vertical-offset="7272" max-vertical-offset="26298">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="18" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="1147" max-vertical-offset="1785">
+            <state line="72" column="0" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.40361446" vertical-offset="884" max-vertical-offset="2142">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="121" column="26" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.53932583" vertical-offset="1479" max-vertical-offset="3285">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="highcharts.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Static/js/plugins/highchart/highcharts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="309" column="19" selection-start="152418" selection-end="152418" vertical-scroll-proportion="0.0" vertical-offset="4160" max-vertical-offset="4725">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -72,8 +50,19 @@
       <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="25" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1620">
+            <state line="89" column="0" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-33.84" vertical-offset="756" max-vertical-offset="1944">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="202" column="29" selection-start="5889" selection-end="5889" vertical-scroll-proportion="-47.185184" vertical-offset="1300" max-vertical-offset="2880">
+              <folding>
+                <element signature="e#3830#5859#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,6 +76,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
@@ -106,8 +100,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -212,86 +208,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aobaipin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="highchart" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -302,9 +218,25 @@
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="97" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="102" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="897" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="97" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="102" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="897" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -556,25 +488,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3091892" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25205478" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3481717" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30601093" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25104168" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3300866" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21405493" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22609176" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3481717" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38155803" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -594,11 +526,65 @@
     </option>
     <MESSAGE value="initialize" />
     <option name="LAST_COMMIT_MESSAGE" value="initialize" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="18" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="1278" max-vertical-offset="2286">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="129" column="14" selection-start="3539" selection-end="3539" vertical-scroll-proportion="0.0" vertical-offset="2322" max-vertical-offset="3942">
+          <folding>
+            <element signature="e#3830#5859#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="25" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="404" column="18" selection-start="15780" selection-end="15792" vertical-scroll-proportion="0.0" vertical-offset="6060" max-vertical-offset="21915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="18" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="1065" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="121" column="26" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.0" vertical-offset="1479" max-vertical-offset="3285">
+          <folding>
+            <element signature="e#3830#5859#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="25" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/models/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="404" column="18" selection-start="15780" selection-end="15792" vertical-scroll-proportion="0.0" vertical-offset="6060" max-vertical-offset="21915">
@@ -615,23 +601,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="23" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
-          <folding />
-        </state>
+        <state line="14" column="23" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="0" selection-start="2539" selection-end="2539" vertical-scroll-proportion="0.0" vertical-offset="1620" max-vertical-offset="1710">
-          <folding />
+          <folding>
+            <element signature="e#3830#5859#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="7" selection-start="5694" selection-end="5694" vertical-scroll-proportion="0.0" vertical-offset="1815" max-vertical-offset="1905">
-          <folding />
-        </state>
+        <state line="121" column="7" selection-start="5694" selection-end="5694" vertical-scroll-proportion="0.0" vertical-offset="1815" max-vertical-offset="1905" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
@@ -650,16 +634,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="5112" max-vertical-offset="17226">
-          <folding />
-        </state>
+        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="5112" max-vertical-offset="17226" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1692" max-vertical-offset="2286">
-          <folding />
-        </state>
+        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1692" max-vertical-offset="2286" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
@@ -671,16 +651,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="4260" max-vertical-offset="14355">
-          <folding />
-        </state>
+        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="4260" max-vertical-offset="14355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="1905">
-          <folding />
-        </state>
+        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="1905" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
@@ -692,16 +668,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="5112" max-vertical-offset="17226">
-          <folding />
-        </state>
+        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="5112" max-vertical-offset="17226" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1692" max-vertical-offset="2286">
-          <folding />
-        </state>
+        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1692" max-vertical-offset="2286" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
@@ -713,16 +685,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="4260" max-vertical-offset="14355">
-          <folding />
-        </state>
+        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="4260" max-vertical-offset="14355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="1905">
-          <folding />
-        </state>
+        <state line="94" column="38" selection-start="4756" selection-end="4756" vertical-scroll-proportion="0.0" vertical-offset="1410" max-vertical-offset="1905" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
@@ -734,16 +702,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="5112" max-vertical-offset="17226">
-          <folding />
-        </state>
+        <state line="284" column="16" selection-start="17751" selection-end="24910" vertical-scroll-proportion="0.0" vertical-offset="5112" max-vertical-offset="17226" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="26" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="2286">
-          <folding />
-        </state>
+        <state line="86" column="26" selection-start="4514" selection-end="4514" vertical-scroll-proportion="0.0" vertical-offset="1548" max-vertical-offset="2286" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
@@ -838,30 +802,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/sample.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="293" column="45" selection-start="18195" selection-end="18195" vertical-scroll-proportion="0.8494382" vertical-offset="4518" max-vertical-offset="17226">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="65" column="25" selection-start="1732" selection-end="1732" vertical-scroll-proportion="0.0" vertical-offset="705" max-vertical-offset="1620">
-          <folding />
-        </state>
+        <state line="293" column="45" selection-start="18195" selection-end="18195" vertical-scroll-proportion="0.8494382" vertical-offset="4518" max-vertical-offset="17226" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aobaipin/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="1" selection-start="584" selection-end="584" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="518">
-          <folding />
-        </state>
+        <state line="16" column="1" selection-start="584" selection-end="584" vertical-scroll-proportion="0.4054054" vertical-offset="0" max-vertical-offset="518" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="7" selection-start="5845" selection-end="5845" vertical-scroll-proportion="0.8128898" vertical-offset="1484" max-vertical-offset="1965">
-          <folding />
-        </state>
+        <state line="125" column="7" selection-start="5845" selection-end="5845" vertical-scroll-proportion="0.8128898" vertical-offset="1484" max-vertical-offset="1965" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/models.py">
@@ -871,25 +822,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="18" selection-start="2131" selection-end="2131" vertical-scroll-proportion="0.0" vertical-offset="802" max-vertical-offset="1785">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Static/js/plugins/highchart/highcharts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="309" column="19" selection-start="152418" selection-end="152418" vertical-scroll-proportion="0.0" vertical-offset="4160" max-vertical-offset="4725">
+        <state line="202" column="29" selection-start="5889" selection-end="5889" vertical-scroll-proportion="-47.185184" vertical-offset="1300" max-vertical-offset="2880">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#3830#5859#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/aobaipin/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="121" column="26" selection-start="3306" selection-end="3306" vertical-scroll-proportion="0.53932583" vertical-offset="1479" max-vertical-offset="3285">
+        <state line="89" column="0" selection-start="2009" selection-end="2009" vertical-scroll-proportion="-33.84" vertical-offset="756" max-vertical-offset="1944">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aobaipin/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="0" selection-start="2140" selection-end="2140" vertical-scroll-proportion="0.40361446" vertical-offset="884" max-vertical-offset="2142">
           <folding />
         </state>
       </provider>
