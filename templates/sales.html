@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block title %}
+销售统计
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-3">
+        <div class="box box-success">
+            <div class="box-header">
+                <h3 class="box-title"> 选项 </h3>
+            </div>
+            <div class="box-body">
+                <div class="form-group">
+                    <label>时间：</label>
+
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" id="reservation">
+                    </div>
+                </div>
+                <label>勾选店铺：</label>
+                {% for shop in checkbox%}
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="{{shop.shopid}}" checked/>
+                            {{ shop.shopname}}
+                        </label>
+                    </div>
+                </div>
+
+                {% endfor %}
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-success" onclick="generate_graph();">生成</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-9">
+        <div class="box box-success">
+            <div class="box-header">
+                <h3 class="box-title">
+                    店铺销售数据分析
+                </h3>
+            </div>
+            <div class="box-body chart-responsive">
+                <div id="chart">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
+
+{% block js %}
+<link href="{%static 'css/daterangepicker/daterangepicker-bs3.css' %}" rel="stylesheet" type="text/css">
+<script src="{%static 'js/plugins/daterangepicker/daterangepicker.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/plugins/highchart/highcharts.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/plugins/highchart/drilldown.js' %}" type="text/javascript"></script>
+<script>
+    $(function () {
+        $('#reservation').daterangepicker();
+
+    });
+    function generate_graph() {
+        var daterange = $("#reservation").val();
+        var checklist = $("input[type='checkbox']:checked");
+        if (!daterange || !checklist.length) {
+            alert("错误选项！")
+            return 0;
+        }
+        var shopid = [];
+        for (var i = 0; i < checklist.length; i++) {
+            shopid.push(checklist[i].value);
+        }
+        daterange = daterange.split('-');
+        $.ajax({
+            url: "/graph_area/",
+            type: "GET",
+            data: {start: daterange[0].trim(), end: daterange[1].trim(), shopid: JSON.stringify(shopid)},
+            success: function (response) {
+                var cat = int_array(response["content"][0].split(','));
+                var dat = response["content"][1];
+                for (var i = 0; i < dat.length; i++) {
+                    dat[i]["data"] = int_array(dat[i]["data"]);
+                }
+                $('#chart').highcharts({
+                    chart: {
+                        type: 'area'
+                    },
+                    title: {
+                        text: null
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        dateTimeLabelFormats: {
+                            day: '%m/%e'
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: '金额 （元）'
+                        },
+                        plotLines: [
+                            {
+                                value: 0,
+                                width: 1,
+                                color: '#808080'
+                            }
+                        ]
+                    },
+                    plotOptions: {
+                        area: {
+                            pointStart: Date.UTC(2000 + cat[0], cat[1] - 1, cat[2]) + new Date().getTimezoneOffset(),
+                            pointInterval: 24 * 60 * 60 * 1000,
+                            marker: {
+                                enabled: false,
+                                symbol: 'circle',
+                                radius: 2,
+                                states: {
+                                    hover: {
+                                        enabled: true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return  Highcharts.dateFormat('%A, %m/%e', new Date(this.x))
+                                    + '  <br/>' + this.y + ' 元';
+                        }
+                    },
+                    legend: {
+                        enabled: false
+                    },
+                    series: dat
+                });
+            }
+        });
+    }
+
+    function int_array(dat) {
+        for (var i = 0; i < dat.length; i++) {
+            dat[i] = parseInt(dat[i]);
+        }
+        return dat;
+    }
+</script>
+{% endblock %}

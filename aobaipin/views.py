@@ -2,12 +2,13 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.db.models import Count
-from models.models import AbpErpAdmin, AbpErpRetail, AbpItem, AbpUser
+from models.models import AbpErpAdmin, AbpErpRetail, AbpItem, AbpUser, AbpErpShop
 from django.template import RequestContext
 from hashlib import md5
 import time
 import datetime
 from django_ajax.decorators import ajax
+import json
 
 
 def index(request):
@@ -54,13 +55,6 @@ def login_status(request):
         return None
 
 
-def custom_context(request):
-    return {
-        "uname": request.session["uname"],
-        "username": request.session["name"]
-    }
-
-
 @ajax
 def graph_spline(request):
     date = []
@@ -71,6 +65,26 @@ def graph_spline(request):
         data.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
                                                  (start + datetime.timedelta(days=i + 1))))[0]))
     return [date[0], data]
+
+
+@ajax
+def graph_area(request):
+    start = datetime.datetime.strptime(str(request.GET["start"]), "%Y/%m/%d")
+    end = datetime.datetime.strptime(str(request.GET["end"]), "%Y/%m/%d")
+    shopids = json.loads(request.GET["shopid"])
+    dic = {}
+    data = []
+    for shopid in shopids:
+        dic = {}
+        arr = []
+        for i in range(0, (end - start).days + 1):
+            arr.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
+                                                    (start + datetime.timedelta(days=i + 1))), shopid)[0]))
+        dic["name"] = AbpErpShop.objects.get(shopid=shopid).shopname
+        dic["data"] = arr
+        data.append(dic)
+
+    return [start.strftime("%y,%m,%d"), data]
 
 
 def dashboard(request):
@@ -86,6 +100,14 @@ def dashboard(request):
     ## get product
     item_data = AbpItem.objects.all().aggregate(Count("itemid"))
     dic["products"] = item_data["itemid__count"]
+
+    shop_data = AbpErpShop.objects.all()
+    sale_data = []
+    for shop in shop_data:
+        sale_data.append((shop.shopname, get_sale_data(range, shop.shopid)))
+
+    dic["shop_sale_data"] = sale_data
+
 
     ## get user
     user_data = AbpUser.objects.filter(regtime__gte=range[0], regtime__lte=range[1]).aggregate(Count("uid"))
@@ -108,13 +130,34 @@ def time_range(date1, date2):
     return [time.mktime(date1.timetuple()), time.mktime(date2.timetuple())]
 
 
-def get_sale_data(range):
+def get_sale_data(range, shopid=None):
     sum = 0
     count = 0
-    retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1])
+    if shopid:
+        retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1], shopid=shopid)
+    else:
+        retail_data = AbpErpRetail.objects.filter(create_time__gte=range[0], create_time__lte=range[1])
     for retail in retail_data:
         sum += retail.money - retail.give
         count += 1
 
     return sum, count
 
+
+def nav_bar():
+    shop_data = AbpErpShop.objects.all()
+    return [{"店铺销售分析": shop_data}]
+
+
+def custom_context(request):
+    return {
+        "nav_list": nav_bar(),
+        "uname": request.session["uname"],
+        "username": request.session["name"],
+    }
+
+
+def sales(request):
+    shop_data = AbpErpShop.objects.all()
+    return render(request, "sales.html", {"checkbox": shop_data},
+                  context_instance=RequestContext(request, processors=[custom_context]))

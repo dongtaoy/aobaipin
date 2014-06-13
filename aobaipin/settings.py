@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -37,7 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_ajax',
-    'models'
+    'cus_filters',
+    'models',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -94,10 +96,12 @@ SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 STATIC_URL = '/static/'
 
+STATIC_ROOT = "/home/dongtaoy/Dropbox/Projects/aobaipin/static/static/"
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )

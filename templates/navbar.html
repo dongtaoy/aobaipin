@@ -1,0 +1,22 @@
+<ul class="sidebar-menu">
+    <li>
+        <a href="../">
+            <i class="fa fa-dashboard"></i> <span>控制面板</span>
+        </a>
+    </li>
+
+
+    {% for nav in nav_list %}
+    <li class="treeview">
+        <a href="#">
+            <i class="fa fa-bar-chart-o"></i>
+            <span>{{ nav.keys.0 }}</span>
+            <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            {% for shop in nav.values.0 %}
+            <li><a href="../sales/"> {{ shop.shopname|slice:"2:" }}</a></li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}

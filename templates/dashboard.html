@@ -1,6 +1,6 @@
 {% extends "base.html" %}
-
-
+{% load cus_filters %}
+{% load staticfiles %}
 {% block title %}
 控制面板
 {% endblock %}
@@ -102,8 +102,8 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-lg-12">
-        <div class="box box-primary">
+    <section class="col-lg-6">
+    <div class="box box-primary">
             <div class="box-header">
                 <div class="pull-right box-tools">
                     <button class="btn btn-primary btn-sm refresh-btn" data-toggle="tooltip"
@@ -128,15 +128,67 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="col-lg-6">
+        <div class="box box-danger">
+            <div class="box-header">
+                <div class="pull-right box-tools">
+                    <!--<button class="btn btn-primary btn-sm refresh-btn" data-toggle="tooltip"
+                            data-original-title="Reload" onclick="graph();">
+                        <i class="fa fa-refresh">
+                        </i>
+                    </button>-->
+                    <button class="btn btn-danger btn-sm" data-widget="collapse" data-toggle="tooltip">
+                        <i class="fa fa-minus">
+                        </i>
+                    </button>
+                </div>
+                <i class="fa fa-dollar"></i>
+
+                <h3 class="box-title">
+                    当前销售情况
+                </h3>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="pad">
+                        {% for shop_sale in shop_sale_data %}
+
+                        <div class="clearfix">
+                            <span class="pull-left">{{ shop_sale.0 }}</span>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="clearfix">
+                                <span class="pull-right">{{ shop_sale.1.0 }}元</span>
+                            </div>
+                            <div class="progress sm progress-striped active">
+                                <div class="progress-bar progress-bar-green"
+                                     style="width: {{ shop_sale.1.0|div:10 }}%;"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="clearfix">
+                                <span class="pull-right">{{ shop_sale.1.1 }}个</span>
+                            </div>
+                            <div class="progress sm progress-striped active">
+                                <div class="progress-bar progress-bar-info"
+                                     style="width: {{ shop_sale.1.1|mul:10 }}%;"></div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 
 
 {% endblock %}
 
 {% block js %}
-<script src="../static/js/plugins/highchart/highcharts.js" type="text/javascript"></script>
-<!--<script src="../static/js/plugins/highchart/highchart.grid.js" type="text/javascript"></script>-->
+<script src="{% static 'js/plugins/highchart/highcharts.js' %}" type="text/javascript"></script>
 <script>
     graph();
 
@@ -182,7 +234,7 @@
                         }
                     },
                     tooltip: {
-                        formatter: function() {
+                        formatter: function () {
                             return  Highcharts.dateFormat('%A, %m/%e', new Date(this.x))
                                     + '  <br/>' + this.y + ' 元';
                         }

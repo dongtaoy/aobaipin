@@ -13,5 +13,7 @@ urlpatterns = patterns('',
     url(r'^dashboard/', 'aobaipin.views.dashboard'),
     url(r'^lock/', 'aobaipin.views.lock'),
     url(r'^graph_spline/', 'aobaipin.views.graph_spline'),
+    url(r'^graph_area/', 'aobaipin.views.graph_area'),
+    url(r'^sales/', 'aobaipin.views.sales'),
     url(r'^admin/', include(admin.site.urls)),
 )
