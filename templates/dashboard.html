@@ -146,7 +146,7 @@
             type: "GET",
             data: {days: 30},
             success: function (response) {
-                var cat = response["content"][0].split(',');
+                var cat = int_array(response["content"][0].split(','));
                 var dat = int_array(response["content"][1]);
 
                 $('#salechart').highcharts({
@@ -176,7 +176,7 @@
                     },
                     plotOptions: {
                         area: {
-                            pointStart: Date.UTC(cat[0],cat[1],cat[2]),
+                            pointStart: Date.UTC(2000 + cat[0], cat[1] - 1, cat[2]) + new Date().getTimezoneOffset(),
                             pointInterval: 24 * 60 * 60 * 1000,
                             enableMouseTracking: true
                         }

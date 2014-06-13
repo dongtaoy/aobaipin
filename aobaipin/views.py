@@ -9,8 +9,9 @@ import time
 import datetime
 from django_ajax.decorators import ajax
 
+
 def index(request):
-    if not(login_status(request)):
+    if not (login_status(request)):
         return redirect("/login")
 
     #return HttpResponse(html)
@@ -55,7 +56,7 @@ def login_status(request):
 
 def custom_context(request):
     return {
-        "uname" : request.session["uname"],
+        "uname": request.session["uname"],
         "username": request.session["name"]
     }
 
@@ -68,14 +69,12 @@ def graph_spline(request):
     for i in range(0, int(request.GET["days"]) + 1):
         date.append((start + datetime.timedelta(days=i)).strftime("%y,%m,%d"))
         data.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
-                                                 (start + datetime.timedelta(days=i+1))))[0]))
+                                                 (start + datetime.timedelta(days=i + 1))))[0]))
     return [date[0], data]
 
 
-
-
 def dashboard(request):
-    if not(login_status(request)):
+    if not (login_status(request)):
         return redirect("/login")
     ## sales, members, orders, products
     today = datetime.date.today()
