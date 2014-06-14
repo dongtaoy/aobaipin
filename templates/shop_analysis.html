@@ -1,0 +1,182 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load cus_filters  %}
+{% block title %}
+店铺销售统计
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-lg-12">
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs pull-right">
+                <li class=""><a href="#tab_1-1" data-toggle="tab">数据分析</a></li>
+                <li class="active"><a href="#tab_2-2" data-toggle="tab">销售走势</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        店铺 <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% for dropdown in dropdowns %}
+                        <li role="presentation"><a role="menuitem"
+                                                   href="{% url 'analysis.views.shop_analysis' dropdown.shopid %}">
+                            {{ dropdown.shopname }}</a></li>
+                        {% endfor %}
+                        <!--
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#"></a></li>-->
+                    </ul>
+                </li>
+                <li class="pull-left header"><i class="fa fa-th"></i>{{ shopname }}</li>
+                <input id="shopid" type="hidden" value="{{shopid}}">
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane table-responsive no-padding" id="tab_1-1">
+
+                    <table class="table table-bordered table-hover">
+                        <tbody>
+                        <tr>
+                            <td style="width: 30%">
+                                平均每笔订单消费
+                            </td>
+
+                            <td style="width: 20%">
+                                {{ avg_sale }} 元
+                            </td>
+                            <td style="width: 40%">
+                                <div class="progress sm progress-striped active">
+                                    <div class="progress-bar progress-bar-green"
+                                         style="width: {{ avg_sale | div:1.5 }}%;"></div>
+                                </div>
+                            </td>
+
+                        </tr >
+                        <tr>
+                            <td>
+                                平均每日销售量
+                            </td>
+                            <td>
+                                {{ daily_sale }} 元
+                            </td>
+                            <td>
+                                <div class="progress sm progress-striped active">
+                                    <div class="progress-bar progress-bar-green"
+                                         style="width: {{ daily_sale | div:10 }}%;"></div>
+                                </div>
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <td>
+                                平均每日订单量
+                            </td>
+                            <td>
+                                {{ daily_retail }} 元
+                            </td>
+                            <td>
+                                <div class="progress sm progress-striped active">
+                                    <div class="progress-bar progress-bar-green"
+                                         style="width: {{ daily_retail | mul:10 }}%;"></div>
+                                </div>
+                            </td>
+
+
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+                <!-- /.tab-pane -->
+                <div class="tab-pane active" id="tab_2-2">
+                    <div class="row">
+                        <div class="chart-responsive">
+                            <div id="chart">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.tab-pane -->
+            </div>
+            <!-- /.tab-content -->
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block js %}
+<link href="{%static 'css/daterangepicker/daterangepicker-bs3.css' %}" rel="stylesheet" type="text/css">
+<script src="{%static 'js/plugins/daterangepicker/daterangepicker.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/plugins/highchart/highcharts.js' %}" type="text/javascript"></script>
+<script>
+    $(function () {
+        var shopid = [];
+        shopid.push(parseInt($('#shopid').val()));
+        today = new Date().getFullYear() + '/' + (new Date().getMonth() + 1) + '/' + new Date().getDate();
+        $.ajax({
+            url: "/analysis/ajax_graph/",
+            type: "GET",
+            data: {start: '2014/4/29', end: today, shopid: JSON.stringify(shopid)},
+            success: function (response) {
+                var cat = response["content"][0];
+                var dat = response["content"][1];
+                $('#chart').highcharts({
+                    chart: {
+                        type: 'area'
+                    },
+                    title: {
+                        text: null
+                    },
+                    xAxis: {
+                        type: 'datetime',
+                        dateTimeLabelFormats: {
+                            day: '%m/%e'
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: '金额 （元）'
+                        },
+                        plotLines: [
+                            {
+                                value: 0,
+                                width: 1,
+                                color: '#808080'
+                            }
+                        ]
+                    },
+                    plotOptions: {
+                        area: {
+                            pointStart: Date.UTC(cat[0], cat[1] - 1, cat[2]),
+                            pointInterval: 24 * 3600 * 1000,
+                            marker: {
+                                enabled: false,
+                                symbol: 'circle',
+                                radius: 2,
+                                states: {
+                                    hover: {
+                                        enabled: true
+                                    }
+                                }
+                            }
+
+                        }
+                    },
+                    tooltip: {
+                        formatter: function () {
+                            return  '日期：' + Highcharts.dateFormat('%m/%e', new Date(this.x))
+                                    + '  <br/>销量：' + this.y + ' 元';
+                        }
+                    },
+                    legend: {
+                        enabled: true
+                    },
+                    series: dat
+                });
+            }
+        });
+    });
+</script>
+
+{% endblock %}

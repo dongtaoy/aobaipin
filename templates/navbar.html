@@ -1,22 +1,20 @@
 <ul class="sidebar-menu">
     <li>
-        <a href="../">
+        <a href="{% url 'aobaipin.views.index' %}">
             <i class="fa fa-dashboard"></i> <span>控制面板</span>
         </a>
     </li>
 
 
-    {% for nav in nav_list %}
     <li class="treeview">
         <a href="#">
             <i class="fa fa-bar-chart-o"></i>
-            <span>{{ nav.keys.0 }}</span>
+            <span>数据分析</span>
             <i class="fa fa-angle-left pull-right"></i>
         </a>
         <ul class="treeview-menu">
-            {% for shop in nav.values.0 %}
-            <li><a href="../sales/"> {{ shop.shopname|slice:"2:" }}</a></li>
-            {% endfor %}
+            <li><a href="{% url 'analysis.views.shop_analysis' %}"><i class="fa fa-angle-double-right"></i>店铺数据分析</a></li>
+            <li><a href="{% url 'analysis.views.shop_comparison' %}"><i class="fa fa-angle-double-right"></i>店铺数据对比</a></li>
         </ul>
     </li>
-    {% endfor %}
+</ul>

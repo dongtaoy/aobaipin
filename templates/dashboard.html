@@ -103,7 +103,7 @@
 </div>
 <div class="row">
     <section class="col-lg-6">
-    <div class="box box-primary">
+        <div class="box box-primary">
             <div class="box-header">
                 <div class="pull-right box-tools">
                     <button class="btn btn-primary btn-sm refresh-btn" data-toggle="tooltip"
@@ -149,11 +149,37 @@
                     当前销售情况
                 </h3>
             </div>
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <th style="">店铺</th>
+                        <th style="width: 45%">达标率</th>
+                        <th style="">销量</th>
+                    </tr>
+                     {% for shop_sale in shop_sale_data %}
+                    <tr>
+                        <td>{{ shop_sale.0 }}</td>
+                        <td>
+                            <div class="progress sm progress-striped active">
+                                <div class="progress-bar progress-bar-green"
+                                     style="width: {{ shop_sale.1.0|div:10 }}%;"></div>
+                            </div>
+                        </td>
+                        <td style="text-align: right">
+                            {{ shop_sale.1.0 }} 元
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!--
             <div class="box-body">
                 <div class="row">
                     <div class="pad">
                         {% for shop_sale in shop_sale_data %}
-
                         <div class="clearfix">
                             <span class="pull-left">{{ shop_sale.0 }}</span>
                         </div>
@@ -180,11 +206,53 @@
                     </div>
                 </div>
             </div>
+            -->
+        </div>
+        <div class="box box-danger">
+            <div class="box-header">
+                <div class="pull-right box-tools">
+                    <button class="btn btn-danger btn-sm" data-widget="collapse" data-toggle="tooltip">
+                        <i class="fa fa-minus">
+                        </i>
+                    </button>
+                </div>
+                <i class="fa fa-rmb"></i>
+
+                <h3 class="box-title">
+                    当前订单情况
+                </h3>
+            </div>
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                    <tbody>
+                    <tr>
+                        <th style="">店铺</th>
+                        <th style="width: 45%">达标率</th>
+                        <th style="">订单量</th>
+                    </tr>
+                     {% for shop_sale in shop_sale_data %}
+                    <tr>
+                        <td>{{ shop_sale.0 }}</td>
+
+                        <td>
+                            <div class="progress sm progress-striped active" style="width: 80%">
+                                <div class="progress-bar progress-bar-info"
+                                     style="width: {{ shop_sale.1.1|mul:10 }}%;"></div>
+                            </div>
+
+                        </td>
+                        <td style="text-align: right">
+                            {{ shop_sale.1.1 }} 个
+                        </td>
+
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 </div>
-
-
 {% endblock %}
 
 {% block js %}
@@ -228,15 +296,24 @@
                     },
                     plotOptions: {
                         area: {
-                            pointStart: Date.UTC(2000 + cat[0], cat[1] - 1, cat[2]) + new Date().getTimezoneOffset(),
+                            pointStart: Date.UTC(2000 + cat[0], cat[1] - 1, cat[2]),
                             pointInterval: 24 * 60 * 60 * 1000,
-                            enableMouseTracking: true
+                            marker: {
+                                enabled: false,
+                                symbol: 'circle',
+                                radius: 2,
+                                states: {
+                                    hover: {
+                                        enabled: true
+                                    }
+                                }
+                            }
                         }
                     },
                     tooltip: {
                         formatter: function () {
-                            return  Highcharts.dateFormat('%A, %m/%e', new Date(this.x))
-                                    + '  <br/>' + this.y + ' 元';
+                            return  '日期：' + Highcharts.dateFormat('%m/%e', new Date(this.x))
+                                    + '  <br/>销量：' + this.y + ' 元';
                         }
                     },
                     legend: {

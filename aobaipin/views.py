@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.db.models import Count
-from models.models import AbpErpAdmin, AbpErpRetail, AbpItem, AbpUser, AbpErpShop
+from abpmodels.models import AbpErpAdmin, AbpErpRetail, AbpItem, AbpUser, AbpErpShop
 from django.template import RequestContext
 from hashlib import md5
 import time
 import datetime
 from django_ajax.decorators import ajax
-import json
-
 
 def index(request):
     if not (login_status(request)):
@@ -65,26 +62,6 @@ def graph_spline(request):
         data.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
                                                  (start + datetime.timedelta(days=i + 1))))[0]))
     return [date[0], data]
-
-
-@ajax
-def graph_area(request):
-    start = datetime.datetime.strptime(str(request.GET["start"]), "%Y/%m/%d")
-    end = datetime.datetime.strptime(str(request.GET["end"]), "%Y/%m/%d")
-    shopids = json.loads(request.GET["shopid"])
-    dic = {}
-    data = []
-    for shopid in shopids:
-        dic = {}
-        arr = []
-        for i in range(0, (end - start).days + 1):
-            arr.append(str(get_sale_data(time_range((start + datetime.timedelta(days=i)),
-                                                    (start + datetime.timedelta(days=i + 1))), shopid)[0]))
-        dic["name"] = AbpErpShop.objects.get(shopid=shopid).shopname
-        dic["data"] = arr
-        data.append(dic)
-
-    return [start.strftime("%y,%m,%d"), data]
 
 
 def dashboard(request):
@@ -144,20 +121,24 @@ def get_sale_data(range, shopid=None):
     return sum, count
 
 
-def nav_bar():
-    shop_data = AbpErpShop.objects.all()
-    return [{"店铺销售分析": shop_data}]
-
-
 def custom_context(request):
+    try:
+        u_id = request.session["u_id"]
+    except:
+        u_id = 0
+    try:
+        uname = request.session["uname"]
+    except:
+        uname = 0
+    try:
+        name = request.session["name"]
+    except:
+        name = 0
     return {
-        "nav_list": nav_bar(),
-        "uname": request.session["uname"],
-        "username": request.session["name"],
+        "u_id": u_id,
+        "uname": uname,
+        "name": name
     }
 
 
-def sales(request):
-    shop_data = AbpErpShop.objects.all()
-    return render(request, "sales.html", {"checkbox": shop_data},
-                  context_instance=RequestContext(request, processors=[custom_context]))
+
